@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="font_sizes">
+        <item>Profile</item>
+        <item>Edit Profile</item>
+        <item>Change Password</item>
+    </string-array>
+</resources>

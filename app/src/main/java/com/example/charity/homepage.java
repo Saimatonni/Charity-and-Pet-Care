@@ -45,6 +45,13 @@ public class homepage extends AppCompatActivity {
                 startActivity(new Intent(homepage.this,All_posts.class));
             }
         });
+        ImageView btn5=findViewById(R.id.contact);
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(homepage.this,contact.class));
+            }
+        });
         //final EditText editText = (EditText)findViewById(R.id.urlText);
         Button pagebtn = (Button) findViewById(R.id.btnNavigate);
         pagebtn.setOnClickListener(new View.OnClickListener() {

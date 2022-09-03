@@ -43,8 +43,8 @@
 
     <ImageView
         android:id="@+id/profile"
-        android:layout_width="93dp"
-        android:layout_height="87dp"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="640dp"
         android:layout_marginEnd="2dp"
@@ -57,36 +57,52 @@
 
     <ImageView
         android:id="@+id/createpost"
-        android:layout_width="99dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="1dp"
+        android:layout_width="65dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/profile"
         app:srcCompat="@drawable/ic_baseline_post_add_24" />
 
     <ImageView
         android:id="@+id/allpost"
-        android:layout_width="100dp"
-        android:layout_height="79dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginBottom="3dp"
+        android:layout_width="72dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/createpost"
         app:srcCompat="@drawable/ic_baseline_all_inbox_24" />
 
     <ImageView
         android:id="@+id/pets"
-        android:layout_width="87dp"
-        android:layout_height="82dp"
+        android:layout_width="66dp"
+        android:layout_height="64dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="643dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/allpost"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.277"
         app:srcCompat="@drawable/ic_baseline_pets_24" />
+
+    <ImageView
+        android:id="@+id/contact"
+        android:layout_width="66dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="656dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pets"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_contact_mail_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

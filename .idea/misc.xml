@@ -8,17 +8,22 @@
         <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/drawable-v24/input_bg.xml" value="0.2265" />
         <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/drawable-v24/input_bg2.xml" value="0.1" />
         <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/drawable/ic_baseline_contact_mail_24.xml" value="0.2265" />
+        <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.217" />
+        <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/drawable/ic_baseline_pets_24.xml" value="0.1" />
         <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
         <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/layout/activity_all_posts.xml" value="0.25052083333333336" />
         <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/layout/activity_contact.xml" value="0.264" />
         <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/layout/activity_create_post.xml" value="0.25052083333333336" />
         <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/layout/activity_custom_vet.xml" value="0.22826086956521738" />
-        <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/layout/activity_homepage.xml" value="0.25416666666666665" />
+        <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/layout/activity_homepage.xml" value="0.264" />
         <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/layout/activity_location.xml" value="0.25052083333333336" />
         <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/layout/activity_pets_info.xml" value="0.22146739130434784" />
+        <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/layout/activity_post.xml" value="0.25416666666666665" />
         <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/layout/header.xml" value="0.264" />
+        <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/menu/drawer_menu.xml" value="0.253125" />
         <entry key="..\:/user/projects/javaproject/charity/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2265" />
       </map>
     </option>

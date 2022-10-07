@@ -16,8 +16,8 @@ public class register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        Toast.makeText(getApplicationContext(),"hi there",Toast.LENGTH_SHORT).show();
-        Log.d(LOG_TAG,"get message");
+        //Toast.makeText(getApplicationContext(),"hi there",Toast.LENGTH_SHORT).show();
+        //Log.d(LOG_TAG,"get message");
         TextView btn=findViewById(R.id.ntohaveaccount);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

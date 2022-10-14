@@ -23,4 +23,8 @@
                 android:title="Share" />
         </menu>
     </item>
+    <item android:id="@+id/logout"
+        android:icon="@drawable/ic_baseline_screen_lock_landscape_24"
+        android:title="Logout"/>
+
 </menu>

@@ -18,12 +18,15 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 
 
 public class homepage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     ImageView bgapp;
     LinearLayout menus,hometext;
+    BottomNavigationView navi_bar;
     Animation frombottom;
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
@@ -31,15 +34,19 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
-       // frombottom = AnimationUtils.loadAnimation(this.R.anim.frombottom);
-        bgapp = (ImageView) findViewById(R.id.bgapp);
-        bgapp.animate().translationY(-2000).setDuration(1000).setStartDelay(200);
-        menus = (LinearLayout) findViewById(R.id.menus);
-        hometext = (LinearLayout) findViewById(R.id.hometext);
-        //menus.startAnimation(frombottom);
-       // bgapp.animate().scaleY(400).setDuration(500).setStartDelay(100);
 
-
+        navi_bar = findViewById(R.id.navi_bar);
+        navi_bar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.createpost:
+                        startActivity(new Intent(homepage.this,CreatePost.class));
+                        break;
+                }
+                return true;
+            }
+        });
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -66,7 +73,11 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
             case R.id.contact:
                 startActivity(new Intent(homepage.this,contact.class));
                 break;
+            case R.id.update_profile:
+                startActivity(new Intent(homepage.this,update_profile.class));
+                break;
         }
         return true;
     }
+
 }

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/regip"
+    tools:context=".welcom">
+
+    <TextView
+        android:id="@+id/welcom"
+        android:layout_width="276dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="468dp"
+        android:text="Welcome"
+        android:textColor="#104730"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnlog"
+        android:layout_width="229dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="94dp"
+        android:background="@drawable/bg2"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcom" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/register"
+        android:layout_width="229dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/bg2"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnlog"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="131dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register">
+
+        <ImageView
+            android:id="@+id/fb"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/fb" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/share" />
+
+        <ImageView
+            android:id="@+id/ggl"
+            android:layout_width="81dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/google" />
+    </LinearLayout>
+
+    <!-- <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/fb"
+           android:id="@+id/fb">
+
+       </ImageView>
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/share"
+           android:id="@+id/share">
+
+       </ImageView>
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/google"
+           android:id="@+id/ggl">
+
+       </ImageView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,6 +35,7 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
+
         navi_bar = findViewById(R.id.navi_bar);
         navi_bar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -42,6 +43,12 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
                 switch (item.getItemId()){
                     case R.id.createpost:
                         startActivity(new Intent(homepage.this,CreatePost.class));
+                        break;
+                    case R.id.profile:
+                        startActivity(new Intent(homepage.this,profile.class));
+                        break;
+                    case R.id.vet:
+                        startActivity(new Intent(homepage.this,pet_details.class));
                         break;
                 }
                 return true;
@@ -75,6 +82,15 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
                 break;
             case R.id.update_profile:
                 startActivity(new Intent(homepage.this,update_profile.class));
+                break;
+            case R.id.profile:
+                startActivity(new Intent(homepage.this,profile.class));
+                break;
+            case R.id.settings:
+                startActivity(new Intent(homepage.this,settings.class));
+                break;
+            case R.id.logout:
+                startActivity(new Intent(homepage.this,login.class));
                 break;
         }
         return true;

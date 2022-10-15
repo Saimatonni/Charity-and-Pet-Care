@@ -74,7 +74,7 @@ public class register extends AppCompatActivity {
            inputPassword.setError("Enter at least 6 length password");
         }else if(!password.matches(confirmpass)){
             inputConfirmPassword.setError("Password doesn't match");
-        }/*else{
+        }else{
             progressDialog.setMessage("Please wait for Registration");
             progressDialog.setTitle("Registration");
             progressDialog.setCanceledOnTouchOutside(false);
@@ -92,8 +92,8 @@ public class register extends AppCompatActivity {
                    }
                 }
             });
-        }*/
-        createAccount();
+        }
+        //createAccount();
 
     }
 

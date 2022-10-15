@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/input_bg"
@@ -159,8 +159,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="399dp"
-        android:layout_height="33dp"
+        android:layout_width="344dp"
+        android:layout_height="31dp"
         android:layout_marginStart="6dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="6dp"
@@ -179,7 +179,7 @@
 
         <TextView
             android:id="@+id/login"
-            android:layout_width="160dp"
+            android:layout_width="117dp"
             android:layout_height="match_parent"
             android:text="Login Here"
             android:textColor="#A17A69"

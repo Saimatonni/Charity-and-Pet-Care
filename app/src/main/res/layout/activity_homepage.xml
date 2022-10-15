@@ -35,13 +35,13 @@
         android:layout_height="match_parent" >
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navi_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/navi_bar"
             android:layout_alignParentBottom="true"
-            app:itemTextColor="@color/black"
-            app:itemIconTint="@color/black"
             android:background="@drawable/bottom_bar"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
             app:menu="@menu/menu_bar">
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>

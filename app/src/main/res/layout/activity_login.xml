@@ -42,8 +42,8 @@
 
     <EditText
         android:id="@+id/inputemail"
-        android:layout_width="332dp"
-        android:layout_height="43dp"
+        android:layout_width="294dp"
+        android:layout_height="41dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
@@ -68,8 +68,8 @@
 
     <EditText
         android:id="@+id/inputPassword"
-        android:layout_width="334dp"
-        android:layout_height="40dp"
+        android:layout_width="295dp"
+        android:layout_height="38dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
@@ -94,10 +94,10 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnlogin"
-        android:layout_width="327dp"
-        android:layout_height="41dp"
+        android:layout_width="302dp"
+        android:layout_height="42dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/btn_bg"
         android:text="Login"
@@ -106,45 +106,45 @@
         android:textStyle="bold"
         app:circularflow_defaultRadius="@dimen/cardview_compat_inset_shadow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.377"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword"
         tools:ignore="MissingConstraints" />
 
-    <LinearLayout
-        android:layout_width="399dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="6dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnlogin">
+     <LinearLayout
+         android:layout_width="360dp"
+         android:layout_height="30dp"
+         android:layout_marginStart="6dp"
+         android:layout_marginTop="25dp"
+         android:layout_marginEnd="6dp"
+         android:orientation="horizontal"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/btnlogin">
 
-        <TextView
-            android:layout_width="223dp"
-            android:layout_height="match_parent"
-            android:text="Don't have an account?"
-            android:textColor="@color/green"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+         <TextView
+             android:layout_width="223dp"
+             android:layout_height="match_parent"
+             android:text="Don't have an account?"
+             android:textColor="@color/green"
+             android:textSize="20sp"
+             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/hereregister"
-            android:layout_width="207dp"
-            android:layout_height="match_parent"
-            android:text="Register Here"
-            android:textColor="#A17A69"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+         <TextView
+             android:id="@+id/hereregister"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:text="Register Here"
+             android:textColor="#A17A69"
+             android:textSize="20sp"
+             android:textStyle="bold" />
+     </LinearLayout>
 
     <TextView
         android:id="@+id/forgotpass"
         android:layout_width="166dp"
         android:layout_height="29dp"
-        android:layout_marginStart="220dp"
+        android:layout_marginStart="172dp"
         android:layout_marginTop="4dp"
         android:text="Forgot Password?"
         android:textSize="20sp"
@@ -152,18 +152,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
-    <!-- <TextView
-         android:id="@+id/nothave"
-         android:layout_width="323dp"
-         android:layout_height="32dp"
-         android:layout_marginStart="44dp"
-         android:layout_marginTop="20dp"
-         android:text="Don't Have An Account"
-         android:textColor="@color/green"
-         android:textSize="20sp"
-         android:textStyle="bold"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />-->
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

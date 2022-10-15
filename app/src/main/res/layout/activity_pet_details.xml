@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4e9d7"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".pet_details">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="272dp"
+        android:layout_height="123dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="For Your Lovely Pets❤"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/pink"
+        android:gravity="center"
+        android:text="Vet For Your Pet"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/pink"
+        android:text="Treat For Your Pet"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/pink"
+        android:text="Groom Your Pet"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="315dp"
+        android:layout_height="359dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/vet_welcome" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green_light"
+        android:text="Back To Homepage"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navi_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bar"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/menu_bar">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</LinearLayout>

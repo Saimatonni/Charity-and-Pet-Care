@@ -80,9 +80,6 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
             case R.id.contact:
                 startActivity(new Intent(homepage.this,contact.class));
                 break;
-            case R.id.update_profile:
-                startActivity(new Intent(homepage.this,update_profile.class));
-                break;
             case R.id.profile:
                 startActivity(new Intent(homepage.this,profile.class));
                 break;

@@ -14,10 +14,10 @@ public class CreatePost extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_post);
-        cattextfile = findViewById(R.id.catspinner);
-        String[] text2=getResources().getStringArray(R.array.post_type);
+        //cattextfile = findViewById(R.id.catspinner);
+       /* String[] text2=getResources().getStringArray(R.array.post_type);
         ArrayAdapter adapter2 = new ArrayAdapter(this, android.R.layout.simple_spinner_item,text2);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        cattextfile.setAdapter(adapter2);
+        cattextfile.setAdapter(adapter2);*/
     }
 }

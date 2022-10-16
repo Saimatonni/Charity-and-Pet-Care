@@ -172,7 +172,7 @@
         <TextView
             android:layout_width="222dp"
             android:layout_height="match_parent"
-            android:text="  Already have an account?"
+            android:text="   Already have an account?"
             android:textColor="#a17a69"
             android:textSize="18sp"
             android:textStyle="bold" />

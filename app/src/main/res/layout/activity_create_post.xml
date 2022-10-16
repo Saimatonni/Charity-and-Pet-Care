@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/post"
+    android:background="@drawable/create_post"
     tools:context=".CreatePost">
 
-    <TextView
+   <!-- <TextView
         android:id="@+id/post"
         android:layout_width="241dp"
         android:layout_height="46dp"
@@ -59,6 +59,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/type"
-        app:layout_constraintVertical_bias="0.317" />
+        app:layout_constraintVertical_bias="0.317" />-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

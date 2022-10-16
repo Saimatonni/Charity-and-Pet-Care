@@ -12,10 +12,11 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="272dp"
-        android:layout_height="123dp"
+        android:layout_height="117dp"
         android:layout_gravity="center"
         android:gravity="center"
         android:text="For Your Lovely Pets❤"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <Button
@@ -27,7 +28,7 @@
         android:gravity="center"
         android:text="Vet For Your Pet"
         android:textColor="@color/black"
-        android:textSize="10sp"
+        android:textSize="12sp"
         android:textStyle="bold" />
 
     <Button
@@ -38,7 +39,7 @@
         android:backgroundTint="@color/pink"
         android:text="Treat For Your Pet"
         android:textColor="@color/black"
-        android:textSize="10sp"
+        android:textSize="12sp"
         android:textStyle="bold" />
 
     <Button
@@ -47,15 +48,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="@color/pink"
-        android:text="Groom Your Pet"
+        android:text="Gallery"
         android:textColor="@color/black"
-        android:textSize="10sp"
+        android:textSize="12sp"
         android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="315dp"
-        android:layout_height="359dp"
+        android:layout_width="338dp"
+        android:layout_height="363dp"
         android:layout_gravity="center"
         app:srcCompat="@drawable/vet_welcome" />
 
@@ -64,9 +65,9 @@
         android:layout_width="246dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/green_light"
-        android:text="Back To Homepage"
+        android:text="Donate for Estrays"
         android:textColor="@color/black"
-        android:textSize="10sp"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

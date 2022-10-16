@@ -21,7 +21,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#18A396"
+            android:background="#8F955D"
             android:elevation="4dp"
             android:text="charity and vet"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"

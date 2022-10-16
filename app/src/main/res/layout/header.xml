@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="206dp"
-    android:background="#59745D"
+    android:background="#8F955D"
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="16dp"
@@ -11,13 +11,13 @@
     <ImageView
         android:layout_width="112dp"
         android:layout_height="116dp"
-        android:src="@drawable/cat" />
+        android:src="@drawable/profile" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
-        android:text="username"
+        android:text="User abcd"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#121111"
         android:textSize="20sp"

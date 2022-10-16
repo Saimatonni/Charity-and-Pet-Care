@@ -18,8 +18,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="152dp"
+        android:layout_height="111dp"
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Jack Willson"
+        android:text="abcd user"
         android:textColor="#151515"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-medium"
-        android:text="jackwillson@gmail.com"
+        android:text="abcd@gmail.com"
         android:textColor="#332a2d"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
@@ -85,8 +85,8 @@
 
                 <ImageView
                     android:id="@+id/imageVie3"
-                    android:layout_width="77dp"
-                    android:layout_height="62dp"
+                    android:layout_width="78dp"
+                    android:layout_height="45dp"
                     android:layout_margin="10dp"
                     app:srcCompat="@drawable/images_prev_ui" />
 
@@ -292,7 +292,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+
         app:menu="@menu/menu_bar">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>

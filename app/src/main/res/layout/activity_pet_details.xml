@@ -43,7 +43,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_gallery"
         android:layout_width="248dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/welcome"
     tools:context=".welcom">
-    
-     <androidx.appcompat.widget.AppCompatButton
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnlog"
         android:layout_width="200dp"
         android:layout_height="35dp"

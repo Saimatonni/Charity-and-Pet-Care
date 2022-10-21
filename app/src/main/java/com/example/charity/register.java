@@ -23,16 +23,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
+import java.util.Locale;
 
 public class register extends AppCompatActivity {
 
-    EditText inputUsername,inputEmail,inputPassword,inputConfirmPassword;
+    EditText inputusername,inputEmail,inputPassword,inputConfirmPassword,inputname;
     Button btnregister;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     ProgressDialog progressDialog;
     FirebaseAuth firebaseAuth;
+    DatabaseReference reference;
     FirebaseUser firebaseUser;
-    String username,email,password,confirmpass;
+    //String username,email,password,confirmpass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,24 +48,76 @@ public class register extends AppCompatActivity {
             }
         });
 
-        inputUsername = findViewById(R.id.inputemail);
+        inputusername = findViewById(R.id.inputusername);
+        inputname = findViewById(R.id.inputname);
         inputEmail = findViewById(R.id.inputEmail);
         inputPassword = findViewById(R.id.inputPassword);
         inputConfirmPassword = findViewById(R.id.inputConfirmPassword);
-        btnregister = findViewById(R.id.btnlogin);
+        btnregister = findViewById(R.id.btnregister);
         progressDialog = new ProgressDialog(this);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
         btnregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PerforAut();
+                //PerforAut();
+                progressDialog = new ProgressDialog(register.this);
+                progressDialog.setMessage("Please wait for Registration");
+                progressDialog.setTitle("Registration");
+                progressDialog.show();
+                String str_username = inputusername.getText().toString();
+                String  str_fullname = inputname.getText().toString();
+                String str_email = inputEmail.getText().toString();
+                String str_password = inputPassword.getText().toString();
+                String str__con_password = inputConfirmPassword.getText().toString();
+                if(!str_email.matches(emailPattern)){
+                    inputEmail.setError("Enter Correct Email");
+                }else if(str_password.isEmpty() || str_password.length()<6){
+                    inputPassword.setError("Enter at least 6 length password");
+                }else if(!str_password.matches(str__con_password)){
+                    inputConfirmPassword.setError("Password doesn't match");
+                }else{
+                    registerf(str_fullname,str_username,str_email,str_password);
+                }
             }
         });
 
     }
+    private void registerf(String name,String username,String email,String password){
+        firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(register.this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+                    String userid = firebaseUser.getUid();
+                    reference = FirebaseDatabase.getInstance().getReference().child("User").child(userid);
+                    HashMap<String, Object>hashMap = new HashMap<>();
+                    hashMap.put("id",userid);
+                    hashMap.put("username",username.toLowerCase(Locale.ROOT));
+                    hashMap.put("name",name);
+                    hashMap.put("bio","");
+                    hashMap.put("imageurl","https://firebasestorage.googleapis.com/v0/b/charity-98a5c.appspot.com/o/dog.jpg?alt=media&token=bd763825-de07-4dcd-8b73-405a1fc45596");
+                    reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                progressDialog.dismiss();
+                                Intent intent = new Intent(register.this,login.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                            }
+                        }
+                    });
+                }else{
+                    progressDialog.dismiss();
+                    Toast.makeText(register.this,"Registration failed",Toast.LENGTH_SHORT).show();
 
-    private void PerforAut() {
+                }
+            }
+        });
+    }
+
+    /*private void PerforAut() {
          username = inputUsername.getText().toString();
          email = inputEmail.getText().toString();
          password = inputPassword.getText().toString();
@@ -133,5 +187,5 @@ public class register extends AppCompatActivity {
         Intent intent = new Intent(register.this,login.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-    }
+    }*/
 }

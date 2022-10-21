@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -21,9 +24,9 @@ public class pet_details extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.createpost:
+                    /*case R.id.createpost:
                         startActivity(new Intent(pet_details.this,CreatePost.class));
-                        break;
+                        break;*/
                     case R.id.profile:
                         startActivity(new Intent(pet_details.this,profile.class));
                         break;
@@ -32,6 +35,13 @@ public class pet_details extends AppCompatActivity {
                         break;
                 }
                 return true;
+            }
+        });
+        Button btn3=findViewById(R.id.btn_gallery);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(pet_details.this,gallery.class));
             }
         });
     }

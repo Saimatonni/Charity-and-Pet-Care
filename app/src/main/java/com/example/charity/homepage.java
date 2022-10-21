@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -17,16 +18,23 @@ import androidx.appcompat.widget.Toolbar;
 
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
+import com.example.charity.Fragment.HomeFragment;
+import com.example.charity.Fragment.NotificationFragment;
+import com.example.charity.Fragment.ProfileFragment;
+import com.example.charity.Fragment.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class homepage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     ImageView bgapp;
     LinearLayout menus,hometext;
     BottomNavigationView navi_bar;
+    Fragment selectedFragment = null;
     Animation frombottom;
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
@@ -37,19 +45,39 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
 
 
         navi_bar = findViewById(R.id.navi_bar);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
         navi_bar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.createpost:
+                   /* case R.id.createpost:
                         startActivity(new Intent(homepage.this,CreatePost.class));
+                        break;*/
+                    case R.id.home:
+                        // startActivity(new Intent(homepage.this,CreatePost.class));
+                        selectedFragment = new HomeFragment();
+                        break;
+                    case R.id.search:
+                        //startActivity(new Intent(homepage.this,profile.class));
+                        selectedFragment = new SearchFragment();
+                        break;
+                    case R.id.notifications:
+                        // startActivity(new Intent(homepage.this,CreatePost.class));
+                        selectedFragment = new NotificationFragment();
                         break;
                     case R.id.profile:
-                        startActivity(new Intent(homepage.this,profile.class));
+                        /*startActivity(new Intent(homepage.this,profile.class));
+                        break;*/
+                        SharedPreferences.Editor editor = getSharedPreferences("PREFS", MODE_PRIVATE).edit();
+                        editor.putString("profilid", FirebaseAuth.getInstance().getCurrentUser().getUid());
+                        editor.apply();
+                        selectedFragment = new ProfileFragment();
                         break;
                     case R.id.vet:
                         startActivity(new Intent(homepage.this,pet_details.class));
                         break;
+                }if (selectedFragment != null) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
                 }
                 return true;
             }

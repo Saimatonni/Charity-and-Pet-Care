@@ -47,8 +47,8 @@ public class SearchFragment extends Fragment {
         mUsers = new ArrayList<>();
         userAdapter = new UserAdapter(getContext(),mUsers);
         recyclerView.setAdapter(userAdapter);
-        readUsers();
-        search_bar.addTextChangedListener(new TextWatcher() {
+       // readUsers();
+        /*search_bar.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -63,10 +63,10 @@ public class SearchFragment extends Fragment {
             public void afterTextChanged(Editable editable) {
 
             }
-        });
+        });*/
         return view;
     }
-    private void searchUsers(String s){
+    /*private void searchUsers(String s){
         Query query = FirebaseDatabase.getInstance().getReference("User").orderByChild("username")
                 .startAt(s)
                 .endAt(s+"\uf8ff");
@@ -107,5 +107,5 @@ public class SearchFragment extends Fragment {
 
             }
         });
-    }
+    }*/
 }

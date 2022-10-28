@@ -51,7 +51,7 @@ public class HomeFragment extends Fragment {
         postList = new ArrayList<>();
         postAdapter = new PostAdapter(getContext(),postList);
         recyclerView.setAdapter(postAdapter);
-        View.OnClickListener listnr=new View.OnClickListener() {
+        /*View.OnClickListener listnr=new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), PostActivity.class);
@@ -60,7 +60,7 @@ public class HomeFragment extends Fragment {
         };
 
         ImageView btn =(ImageView) view.findViewById(R.id.createpost);
-        btn.setOnClickListener(listnr);
+        btn.setOnClickListener(listnr);*/
         readPost();
         return view;
 
@@ -92,4 +92,5 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+
 }

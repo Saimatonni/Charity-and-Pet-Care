@@ -45,34 +45,45 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
 
 
         navi_bar = findViewById(R.id.navi_bar);
+        Bundle intent = getIntent().getExtras();
+        if(intent!=null){
+           String publisher = intent.getString("publisherid");
+            SharedPreferences.Editor editor = getSharedPreferences("PREFS",MODE_PRIVATE).edit();
+            editor.putString("profileid",publisher);
+            editor.apply();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProfileFragment()).commit();
+        }else {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+        }
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
         navi_bar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                   /* case R.id.createpost:
-                        startActivity(new Intent(homepage.this,CreatePost.class));
-                        break;*/
+                   case R.id.createpost:
+                        startActivity(new Intent(homepage.this,PostActivity.class));
+                        break;
                     case R.id.home:
                         // startActivity(new Intent(homepage.this,CreatePost.class));
                         selectedFragment = new HomeFragment();
                         break;
-                    case R.id.search:
+
+                    case R.id.profile:
+                        // startActivity(new Intent(homepage.this,CreatePost.class));
+                        SharedPreferences.Editor editor = getSharedPreferences("PREFS", MODE_PRIVATE).edit();
+                        editor.putString("profileid", FirebaseAuth.getInstance().getCurrentUser().getUid());
+                        editor.apply();
+                        selectedFragment = new ProfileFragment();
+                        break;
+                    /*case R.id.search:
                         //startActivity(new Intent(homepage.this,profile.class));
                         selectedFragment = new SearchFragment();
-                        break;
+                        break;*/
                     case R.id.notifications:
                         // startActivity(new Intent(homepage.this,CreatePost.class));
                         selectedFragment = new NotificationFragment();
                         break;
-                    case R.id.profile:
-                        /*startActivity(new Intent(homepage.this,profile.class));
-                        break;*/
-                        SharedPreferences.Editor editor = getSharedPreferences("PREFS", MODE_PRIVATE).edit();
-                        editor.putString("profilid", FirebaseAuth.getInstance().getCurrentUser().getUid());
-                        editor.apply();
-                        selectedFragment = new ProfileFragment();
-                        break;
+
                     case R.id.vet:
                         startActivity(new Intent(homepage.this,pet_details.class));
                         break;
@@ -108,9 +119,13 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
             case R.id.contact:
                 startActivity(new Intent(homepage.this,contact.class));
                 break;
-            case R.id.profile:
+            /*case R.id.profile:
                 startActivity(new Intent(homepage.this,profile.class));
                 break;
+                SharedPreferences.Editor editor = getSharedPreferences("PREFS",MODE_PRIVATE).edit();
+                editor.putString("profileid",FirebaseAuth.getInstance().getCurrentUser().getUid());
+                startActivity(new Intent(homepage.this,profile.class));
+                break;*/
             case R.id.settings:
                 startActivity(new Intent(homepage.this,settings.class));
                 break;

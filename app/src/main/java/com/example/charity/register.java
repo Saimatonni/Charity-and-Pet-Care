@@ -83,7 +83,7 @@ public class register extends AppCompatActivity {
         });
 
     }
-    private void registerf(String name,String username,String email,String password){
+    private void registerf(String fullname,String username,String email,String password){
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(register.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -94,8 +94,11 @@ public class register extends AppCompatActivity {
                     HashMap<String, Object>hashMap = new HashMap<>();
                     hashMap.put("id",userid);
                     hashMap.put("username",username.toLowerCase(Locale.ROOT));
-                    hashMap.put("name",name);
-                    hashMap.put("bio","");
+                    hashMap.put("fullname",fullname);
+                    hashMap.put("email",email);
+                    hashMap.put("password",password);
+                    hashMap.put("address","");
+                    hashMap.put("contact","");
                     hashMap.put("imageurl","https://firebasestorage.googleapis.com/v0/b/charity-98a5c.appspot.com/o/dog.jpg?alt=media&token=bd763825-de07-4dcd-8b73-405a1fc45596");
                     reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override

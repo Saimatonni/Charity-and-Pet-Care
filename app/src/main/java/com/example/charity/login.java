@@ -74,6 +74,22 @@ public class login extends AppCompatActivity {
                                 reference.addValueEventListener(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        /*String passwordfrombd = snapshot.child(str_password).child("password").getValue(String.class);
+                                       // if(passwordfrombd.equals(str_password)){
+                                            String email = snapshot.child(str_password).child("email").getValue(String.class);
+                                            String fullname = snapshot.child(str_password).child("fullname").getValue(String.class);
+                                            String username = snapshot.child(str_password).child("username").getValue(String.class);
+                                            pd.dismiss();
+                                            Intent intent = new Intent(login.this,homepage.class);
+                                            intent.putExtra("fullname",fullname);
+                                            intent.putExtra("email",email);
+                                            intent.putExtra("username",username);
+                                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                            startActivity(intent);
+                                            finish();*/
+
+
+                                      //  }
                                         pd.dismiss();
                                         Intent intent = new Intent(login.this,homepage.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

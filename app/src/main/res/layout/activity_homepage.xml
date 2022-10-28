@@ -53,7 +53,7 @@
             android:id="@+id/navi_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+
             android:background="@drawable/bottom_bar"
             app:itemIconTint="@color/black"
             app:itemTextColor="@color/selector"

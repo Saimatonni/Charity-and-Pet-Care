@@ -43,14 +43,7 @@
         android:id="@+id/recycler_view">
 
     </androidx.recyclerview.widget.RecyclerView>
-    <ImageView
-        android:id="@+id/createpost"
-        android:layout_width="45dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="310dp"
-        android:layout_marginTop="560dp"
-        android:layout_marginBottom="0dp"
-        android:src="@drawable/plus" />
+
 
 </RelativeLayout>
 <!--<ImageView

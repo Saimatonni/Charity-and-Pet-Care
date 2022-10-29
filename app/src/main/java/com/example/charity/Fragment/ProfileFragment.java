@@ -1,6 +1,7 @@
 package com.example.charity.Fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -19,6 +20,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.charity.Adapter.DonationAdapter;
+import com.example.charity.EditProfileActivity;
 import com.example.charity.Model.User;
 import com.example.charity.Model.post;
 import com.example.charity.R;
@@ -80,7 +82,7 @@ public class ProfileFragment extends Fragment {
             public void onClick(View view) {
                 String btn = edit_profile.getText().toString();
                 if(btn.equals("Edit Profile")){
-
+                   startActivity(new Intent(getContext(), EditProfileActivity.class));
                 }
             }
         });

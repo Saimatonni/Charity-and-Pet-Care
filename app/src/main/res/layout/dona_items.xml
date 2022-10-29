@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <TextView
+    <!--<TextView
         android:id="@+id/catagory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
         android:textColor="#D51515"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold" />-->
 
     <ImageView
         android:id="@+id/post_image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="1dp"
          />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/description"
         android:layout_width="match_parent"
 
         android:layout_height="wrap_content"
 
         android:textColor="@color/black"
-        android:textSize="16sp" />
-</LinearLayout>
+        android:textSize="16sp" />-->
+</RelativeLayout>

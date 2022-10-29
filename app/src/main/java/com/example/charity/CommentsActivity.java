@@ -56,12 +56,15 @@ public class CommentsActivity extends AppCompatActivity {
                 finish();
             }
         });*/
+        Intent intent = getIntent();
+        postid = intent.getStringExtra("postid");
+        publisherid = intent.getStringExtra("publisherid");
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         commentList = new ArrayList<>();
-        commentAdapter = new CommentAdapter(this,commentList);
+        commentAdapter = new CommentAdapter(this,commentList,postid);
         recyclerView.setAdapter(commentAdapter);
         ImageView btn3=findViewById(R.id.back);
         btn3.setOnClickListener(new View.OnClickListener() {
@@ -75,9 +78,9 @@ public class CommentsActivity extends AppCompatActivity {
         post = findViewById(R.id.post);
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
-        Intent intent = getIntent();
+       /* Intent intent = getIntent();
         postid = intent.getStringExtra("postid");
-        publisherid = intent.getStringExtra("publisherid");
+        publisherid = intent.getStringExtra("publisherid");*/
         post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,7 +89,7 @@ public class CommentsActivity extends AppCompatActivity {
                 }else{
                     addComment();
                     Toast.makeText(CommentsActivity.this, "Commented", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(CommentsActivity.this, CommentsActivity.class));
+                    //startActivity(new Intent(CommentsActivity.this,homepage.class));
                 }
             }
         });
@@ -95,10 +98,12 @@ public class CommentsActivity extends AppCompatActivity {
     }
     private void addComment(){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Comments").child(postid);
+        String commentid = reference.push().getKey();
         HashMap<String,Object>hashMap = new HashMap<>();
         hashMap.put("comment",add_comment.getText().toString());
         hashMap.put("publisher",firebaseUser.getUid());
-        reference.push().setValue(hashMap);
+        hashMap.put("commentid",commentid);
+        reference.child(commentid).setValue(hashMap);
         add_comment.setText("");
     }
     private void getImage(){

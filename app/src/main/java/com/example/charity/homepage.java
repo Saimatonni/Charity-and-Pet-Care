@@ -3,15 +3,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 //import android.widget.Toolbar;
 import androidx.appcompat.widget.Toolbar;
@@ -20,32 +23,53 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import com.bumptech.glide.Glide;
 import com.example.charity.Fragment.HomeFragment;
 import com.example.charity.Fragment.NotificationFragment;
 import com.example.charity.Fragment.ProfileFragment;
 import com.example.charity.Fragment.SearchFragment;
+import com.example.charity.Model.User;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 public class homepage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     ImageView bgapp;
+    FirebaseUser firebaseUser;
+    ImageView image_profile;
+    TextView username,email;
     LinearLayout menus,hometext;
     BottomNavigationView navi_bar;
     Fragment selectedFragment = null;
+    private NavigationView nav_view;
     Animation frombottom;
+    private View header;
+    String profileid;
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
-
-
+        nav_view = findViewById(R.id.nav_view);
+        header = nav_view.getHeaderView(0);
+        image_profile = header.findViewById(R.id.image_profile);
+        username = header.findViewById(R.id.username);
+        email = header.findViewById(R.id.email);
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         navi_bar = findViewById(R.id.navi_bar);
+        SharedPreferences prefs = getSharedPreferences("PREFS", Context.MODE_PRIVATE);
+        profileid = prefs.getString("profileid","none");
         Bundle intent = getIntent().getExtras();
+        userInfo();
         if(intent!=null){
            String publisher = intent.getString("publisherid");
             SharedPreferences.Editor editor = getSharedPreferences("PREFS",MODE_PRIVATE).edit();
@@ -93,6 +117,7 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
                 return true;
             }
         });
+        //header = nav_view.getHeaderView(0);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -134,6 +159,28 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
                 break;
         }
         return true;
+    }
+    private void userInfo(){
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User").child(firebaseUser.getUid());
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User user = snapshot.getValue(User.class);
+                if(user!=null) {
+                    Glide.with(getApplicationContext()).load(user.getImageurl()).into(image_profile);
+                    username.setText(user.getUsername());
+                    email.setText(user.getEmail());
+                }else{
+                    return;
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
 }

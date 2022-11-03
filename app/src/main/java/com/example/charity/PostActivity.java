@@ -63,7 +63,7 @@ public class PostActivity extends AppCompatActivity {
         location = findViewById(R.id.location);
         mdatabase= FirebaseDatabase.getInstance();
         // mref = mdatabase.getReference().child("Users");
-        mref = mdatabase.getReference("Posts");
+         mref = mdatabase.getReference("Posts");
         mstorage = FirebaseStorage.getInstance();
         progressDialog = new ProgressDialog(this);
 
@@ -107,7 +107,7 @@ public class PostActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String des = description.getText().toString().trim();
-                String postid = mref.push().getKey();
+                //String postid = mref.push().getKey();
                 String publisher = description.getText().toString().trim();
                 String cat = catagory.getText().toString().trim();
                 String loca = location.getText().toString().trim();
@@ -122,8 +122,11 @@ public class PostActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Uri> task) {
                                     String t = task.getResult().toString();
+                                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Posts");
+                                    String postid = reference.push().getKey();
                                     DatabaseReference newPost=mref.push();
                                     newPost.child("postid").setValue(postid);
+
                                     newPost.child("postimage").setValue(task.getResult().toString());
                                     newPost.child("description").setValue(des);
                                     newPost.child("catagory").setValue(cat);
@@ -145,4 +148,12 @@ public class PostActivity extends AppCompatActivity {
         });
     }
 }
+/*HashMap<String, Object>hashMap = new HashMap<>();
+                                    hashMap.put("postid",postid);
+                                    hashMap.put("postimage",task.getResult().toString());
+                                    hashMap.put("description",description.getText().toString());
+                                    hashMap.put("location",location.getText().toString());
+                                    hashMap.put("catagory",catagory.getText().toString());
+                                    hashMap.put("publisher",FirebaseAuth.getInstance().getCurrentUser().getUid());
+                                    reference.setValue(hashMap);*/
 

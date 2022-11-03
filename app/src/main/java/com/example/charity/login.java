@@ -26,6 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class login extends AppCompatActivity {
     EditText inputPassword,inputemail;
+    TextView forgotpass;
     ProgressDialog progressDialog;
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
@@ -47,9 +48,16 @@ public class login extends AppCompatActivity {
 
         inputemail = findViewById(R.id.inputemail);
         inputPassword = findViewById(R.id.inputPassword);
+        forgotpass = findViewById(R.id.forgotpass);
         progressDialog = new ProgressDialog(this);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
+        forgotpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(login.this,ForgotPassword.class));
+            }
+        });
         Button btn2=findViewById(R.id.btnlogin);
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,19 +82,7 @@ public class login extends AppCompatActivity {
                                 reference.addValueEventListener(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        /*String passwordfrombd = snapshot.child(str_password).child("password").getValue(String.class);
-                                       // if(passwordfrombd.equals(str_password)){
-                                            String email = snapshot.child(str_password).child("email").getValue(String.class);
-                                            String fullname = snapshot.child(str_password).child("fullname").getValue(String.class);
-                                            String username = snapshot.child(str_password).child("username").getValue(String.class);
-                                            pd.dismiss();
-                                            Intent intent = new Intent(login.this,homepage.class);
-                                            intent.putExtra("fullname",fullname);
-                                            intent.putExtra("email",email);
-                                            intent.putExtra("username",username);
-                                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                            startActivity(intent);
-                                            finish();*/
+
 
 
                                       //  }
@@ -104,7 +100,7 @@ public class login extends AppCompatActivity {
                                 });
                             }else{
                                 pd.dismiss();
-                                Toast.makeText(login.this,"Authentication failed",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(login.this,"Wrong Email or Password, try again",Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -113,68 +109,4 @@ public class login extends AppCompatActivity {
         });
     }
 
-    /*private void PerLog() {
-         email = inputemail.getText().toString();
-         password = inputPassword.getText().toString();
-        if(!email.matches(emailPattern)){
-            inputemail.setError("Enter Correct Email");
-        }else if(password.isEmpty() || password.length()<6){
-            inputPassword.setError("Enter at least 6 length password");
-        }else {
-            progressDialog.setMessage("Please wait for Login");
-            progressDialog.setTitle("Login");
-            progressDialog.setCanceledOnTouchOutside(false);
-            progressDialog.show();
-            firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()){
-                        progressDialog.dismiss();
-                        sendUserToNextActivity();
-                        Toast.makeText(login.this, "Login Successful",Toast.LENGTH_SHORT).show();
-                    }else{
-                        progressDialog.dismiss();
-                        Toast.makeText(login.this, ""+task.getException(),Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        }
-        //checkDB();
-    }
-
-    private void checkDB() {
-        progressDialog.setMessage("Please wait for Login");
-        progressDialog.setTitle("Login");
-        progressDialog.setCanceledOnTouchOutside(false);
-        progressDialog.show();
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User");
-        reference.child(password).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()){
-                    String dp_password = snapshot.child("password").getValue(String.class);
-                    if(password.equals(dp_password)){
-                        //sendUserToNextActivity();
-                        progressDialog.dismiss();
-                        sendUserToNextActivity();
-                        Toast.makeText(login.this, "Login Successful",Toast.LENGTH_SHORT).show();
-                    }else{
-                        progressDialog.dismiss();
-                        Toast.makeText(login.this, "Record not found!",Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
-
-    private void sendUserToNextActivity() {
-        Intent intent = new Intent(login.this,homepage.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
-    }*/
 }

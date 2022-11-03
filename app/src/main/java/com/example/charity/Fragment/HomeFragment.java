@@ -20,6 +20,7 @@ import com.example.charity.Adapter.PostAdapter;
 import com.example.charity.Model.post;
 import com.example.charity.PostActivity;
 import com.example.charity.R;
+import com.example.charity.SearchActivity;
 import com.example.charity.gallery;
 import com.example.charity.pet_details;
 import com.google.firebase.database.DataSnapshot;
@@ -36,6 +37,7 @@ public class HomeFragment extends Fragment {
     private RecyclerView recyclerView;
     private PostAdapter postAdapter;
     //ImageView createpost;
+    //ImageView search;
     DatabaseReference databaseReference;
     DatabaseError databaseError;
     private List<post>  postList;
@@ -55,16 +57,16 @@ public class HomeFragment extends Fragment {
         recyclerView.setAdapter(postAdapter);
         progressBar = view.findViewById(R.id.progress_circular);
 
-        /*View.OnClickListener listnr=new View.OnClickListener() {
+        View.OnClickListener listnr=new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), PostActivity.class);
+                Intent intent = new Intent(getActivity(), SearchActivity.class);
                 startActivity(intent);
             }
         };
 
-        ImageView btn =(ImageView) view.findViewById(R.id.createpost);
-        btn.setOnClickListener(listnr);*/
+        ImageView btn =(ImageView) view.findViewById(R.id.search);
+        btn.setOnClickListener(listnr);
         readPost();
         return view;
 

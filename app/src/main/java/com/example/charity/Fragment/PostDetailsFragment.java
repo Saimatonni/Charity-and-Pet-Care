@@ -38,6 +38,8 @@ public class PostDetailsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_post_details, container, false);
         SharedPreferences preferences = getContext().getSharedPreferences("PREFS", Context.MODE_PRIVATE);
         postid = preferences.getString("postid","none");
+       // DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Posts");
+       // postid = reference.push().getKey();
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -50,27 +52,19 @@ public class PostDetailsFragment extends Fragment {
     }
 
     private void readPosts() {
+       // DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Posts");
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Posts").child(postid);
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                postList.clear();
                post pst = snapshot.getValue(post.class);
-               postList.add(pst);
+               if(pst!=null){
+                   postList.add(pst);
+               }
+              // postList.add(pst);
                postAdapter.notifyDataSetChanged();
-                /*postList.clear();
-                for(DataSnapshot snapshot1: snapshot.getChildren()){
-                    post pst = snapshot1.getValue(post.class);
 
-                    postList.add(pst);
-                    postAdapter = new PostAdapter(getActivity(),postList);
-                    recyclerView.setAdapter(postAdapter);
-
-
-
-                }
-                postAdapter.notifyDataSetChanged();*/
-               // progressBar.setVisibility(View.GONE);
             }
 
             @Override

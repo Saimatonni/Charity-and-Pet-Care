@@ -34,6 +34,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -88,6 +89,7 @@ public class ProfileFragment extends Fragment {
         });
         return view;
     }
+
     private void userInfo(){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User").child(profileid);
         reference.addValueEventListener(new ValueEventListener() {

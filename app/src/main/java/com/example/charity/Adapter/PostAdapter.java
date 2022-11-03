@@ -80,6 +80,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
         isLikes(pst.getPostid(),holder.like);
         mrLikes(holder.likes,pst.getPostid());
         getComments(pst.getPostid(),holder.comments);
+        morep(holder.more, pst.getPostid(), pst.getPublisher());
         holder.image_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -148,7 +149,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
                 mContext.startActivity(intent);
             }
         });
-        holder.more.setOnClickListener(new View.OnClickListener() {
+        /*holder.more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 PopupMenu popupMenu = new PopupMenu(mContext,view);
@@ -184,7 +185,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
                 }
                 popupMenu.show();
             }
-        });
+        });*/
     }
 
     @Override
@@ -231,13 +232,13 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-               if(snapshot.child(firebaseUser.getUid()).exists()){
-                   imageView.setImageResource(R.drawable.ic_likes);
-                   imageView.setTag("liked");
-               }else{
-                   imageView.setImageResource(R.drawable.ic_baseline_favorite_24);
-                   imageView.setTag("like");
-               }
+                if(snapshot.child(firebaseUser.getUid()).exists()){
+                    imageView.setImageResource(R.drawable.ic_likes);
+                    imageView.setTag("liked");
+                }else{
+                    imageView.setImageResource(R.drawable.ic_baseline_favorite_24);
+                    imageView.setTag("like");
+                }
             }
 
             @Override
@@ -251,7 +252,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-               likes.setText(snapshot.getChildrenCount()+" likes");
+                likes.setText(snapshot.getChildrenCount()+" likes");
             }
 
             @Override
@@ -310,7 +311,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 editText.setText(snapshot.child("description").getValue(String.class));
-               // editText.setText(snapshot.getValue(post.class).getDescription());
+                // editText.setText(snapshot.getValue(post.class).getDescription());
             }
 
             @Override
@@ -319,6 +320,44 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
             }
         });
     }
+    private void morep(ImageView more,String postid,String publisher){
+        more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupMenu popupMenu = new PopupMenu(mContext,view);
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem menuItem) {
+                        switch (menuItem.getItemId()){
+                            case R.id.edit:
+                                editPost(postid);
+                                return true;
+                            case R.id.delete:
+                                FirebaseDatabase.getInstance().getReference("Posts").child(postid).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if(task.isSuccessful()){
+                                            Toast.makeText(mContext,"Deleted",Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
+                                return true;
+                            case R.id.report:
+                                Toast.makeText(mContext,"reported",Toast.LENGTH_SHORT).show();
+                                return true;
+                            default:
+                                return false;
+                        }
+                    }
+                });
+                popupMenu.inflate(R.menu.post_menu);
+                if(!publisher.equals(firebaseUser.getUid())){
+                    popupMenu.getMenu().findItem(R.id.edit).setVisible(false);
+                    popupMenu.getMenu().findItem(R.id.delete).setVisible(false);
+                }
+                popupMenu.show();
+            }
+        });
+    }
 
 }
-

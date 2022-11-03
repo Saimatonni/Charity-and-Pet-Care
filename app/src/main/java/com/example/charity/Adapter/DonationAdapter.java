@@ -40,7 +40,8 @@ public class DonationAdapter extends RecyclerView.Adapter<DonationAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         post pst = mpost.get(position);
         Glide.with(context).load(pst.getPostimage()).into(holder.postimage);
-        holder.postimage.setOnClickListener(new View.OnClickListener() {
+        postde(holder.postimage, pst.getPostid());
+        /*holder.postimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SharedPreferences.Editor editor = context.getSharedPreferences("PREFS",Context.MODE_PRIVATE).edit();
@@ -49,7 +50,7 @@ public class DonationAdapter extends RecyclerView.Adapter<DonationAdapter.ViewHo
                 ((FragmentActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new PostDetailsFragment()).commit();
 
             }
-        });
+        });*/
         /*holder.description.setVisibility(View.VISIBLE);
         holder.description.setText(pst.getDescription());
         holder.catagory.setVisibility(View.VISIBLE);
@@ -71,7 +72,19 @@ public class DonationAdapter extends RecyclerView.Adapter<DonationAdapter.ViewHo
             super(itemView);
             postimage = itemView.findViewById(R.id.post_image);
             //catagory = itemView.findViewById(R.id.catagory);
-           // description = itemView.findViewById(R.id.description);
+            // description = itemView.findViewById(R.id.description);
         }
+    }
+    private void postde(ImageView postimage,String postid){
+        postimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor editor = context.getSharedPreferences("PREFS",Context.MODE_PRIVATE).edit();
+                editor.putString("postid",postid);
+                editor.apply();
+                ((FragmentActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new PostDetailsFragment()).commit();
+
+            }
+        });
     }
 }

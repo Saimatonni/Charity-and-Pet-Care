@@ -18,7 +18,7 @@
         android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="Full Name"
+        android:hint="Full name"
         android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"

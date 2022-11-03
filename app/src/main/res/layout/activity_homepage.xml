@@ -5,13 +5,14 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
 
-    android:layout_height="730dp"
+    android:layout_height="match_parent"
 
     tools:context=".homepage"
     tools:ignore="HardcodedText">
 
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -23,46 +24,48 @@
             android:layout_height="?attr/actionBarSize"
             android:background="#8F955D"
             android:elevation="4dp"
-            android:text="charity and vet"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
             app:titleTextAppearance="@style/TextAppearance.AppCompat.Body1"
-            app:titleTextColor="#0C0C0C" />
+            app:titleTextColor="#0C0C0C">
 
-    <RelativeLayout
-        android:id="@+id/relative_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        </androidx.appcompat.widget.Toolbar>
 
-        <FrameLayout
-            android:id="@+id/fragment_container"
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@id/bottom"
-            android:layout_marginBottom="3dp">
+            android:layout_height="match_parent">
 
-        </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottom"
+                android:layout_marginBottom="3dp">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/bottom"
-            android:layout_alignParentBottom="true">
+            </FrameLayout>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/navi_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
 
-            android:background="@drawable/bottom_bar"
-            app:itemIconTint="@color/black"
-            app:itemTextColor="@color/selector"
-            app:menu="@menu/menu_bar">
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/navi_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/bottom_bar"
+                    app:itemIconTint="@color/black"
+                    app:itemTextColor="@color/selector"
+                    app:menu="@menu/menu_bar">
 
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
-        </com.google.android.material.appbar.AppBarLayout>
+                </com.google.android.material.bottomnavigation.BottomNavigationView>
+            </com.google.android.material.appbar.AppBarLayout>
 
-    </RelativeLayout>
+        </RelativeLayout>
 
 
     </LinearLayout>

@@ -8,25 +8,25 @@
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_profile"
         android:layout_width="112dp"
-        android:layout_height="116dp"
-        android:src="@drawable/profile" />
+        android:layout_height="116dp"/>
 
     <TextView
+        android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
-        android:text="User abcd"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#121111"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="abcd@gmail.com"
         android:textColor="#0C0C0C"
         android:textStyle="bold" />
 

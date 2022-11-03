@@ -28,11 +28,12 @@
                     android:textStyle="bold" />
 
                 <ImageView
+                    android:id="@+id/search"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_baseline_chat_24" />
+                    android:src="@drawable/ic_baseline_search_24" />
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>

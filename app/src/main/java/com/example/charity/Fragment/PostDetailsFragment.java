@@ -27,9 +27,9 @@ import java.util.List;
 
 public class PostDetailsFragment extends Fragment {
     String postid;
-    private RecyclerView recyclerView;
-    private PostAdapter postAdapter;
-    private List<post> postList;
+     RecyclerView recyclerView;
+     PostAdapter postAdapter;
+     List<post> postList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -17,6 +17,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.charity.Adapter.PostAdapter;
+import com.example.charity.MapActivity;
 import com.example.charity.Model.post;
 import com.example.charity.PostActivity;
 import com.example.charity.R;
@@ -67,6 +68,16 @@ public class HomeFragment extends Fragment {
 
         ImageView btn =(ImageView) view.findViewById(R.id.search);
         btn.setOnClickListener(listnr);
+        View.OnClickListener listnr2=new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), MapActivity.class);
+                startActivity(intent);
+            }
+        };
+
+        ImageView btn2 =(ImageView) view.findViewById(R.id.map);
+        btn2.setOnClickListener(listnr2);
         readPost();
         return view;
 

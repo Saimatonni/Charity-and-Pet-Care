@@ -19,5 +19,10 @@
     <color name="blurry">#E5D2C4</color>
     <color name="colorPrimary">#455cde</color>
     <color name="colorPrimaryDark">#403d3d</color>
+   <!--for settings part--> 
+    <color name="bg_color">#c2c4b6</color>
+    <color name="secondary">#ff03dac5</color>
+    <color name="night_mode">#6124b1</color>
+    <color name="notifications">#13b2c3</color>
 
 </resources>

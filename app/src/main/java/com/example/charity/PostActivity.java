@@ -107,7 +107,7 @@ public class PostActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String des = description.getText().toString().trim();
-                //String postid = mref.push().getKey();
+               // String postid = mref.push().getKey();
                 String publisher = description.getText().toString().trim();
                 String cat = catagory.getText().toString().trim();
                 String loca = location.getText().toString().trim();

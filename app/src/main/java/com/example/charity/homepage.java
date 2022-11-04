@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -45,7 +46,7 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
     ImageView bgapp;
     FirebaseUser firebaseUser;
     ImageView image_profile;
-    TextView username,email;
+    TextView username,email,location;
     LinearLayout menus,hometext;
     BottomNavigationView navi_bar;
     Fragment selectedFragment = null;
@@ -66,6 +67,7 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
         email = header.findViewById(R.id.email);
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         navi_bar = findViewById(R.id.navi_bar);
+       // location = findViewById(R.id.location);
         SharedPreferences prefs = getSharedPreferences("PREFS", Context.MODE_PRIVATE);
         profileid = prefs.getString("profileid","none");
         Bundle intent = getIntent().getExtras();
@@ -157,6 +159,9 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
             case R.id.logout:
                 startActivity(new Intent(homepage.this,login.class));
                 break;
+            case R.id.about:
+                startActivity(new Intent(homepage.this,about.class));
+                break;
         }
         return true;
     }
@@ -181,6 +186,12 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
 
             }
         });
+        /*location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(homepage.this,MapActivity.class));
+            }
+        });*/
     }
 
 }

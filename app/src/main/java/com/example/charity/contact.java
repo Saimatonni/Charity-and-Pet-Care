@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 public class contact extends AppCompatActivity {
     private EditText editemail;
@@ -26,6 +27,13 @@ public class contact extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                sendMail();
+            }
+        });
+        ImageView btn2=findViewById(R.id.backch);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(contact.this,homepage.class));
             }
         });
 

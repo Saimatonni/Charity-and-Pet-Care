@@ -3,47 +3,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.charity">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher_round"
-        android:label="@string/app_name"
+        android:label="Charity and Pet Care"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".post"
+            android:name=".DonateActivity"
             android:exported="false" />
+        <activity
+            android:name=".treat_for_pet"
+            android:exported="false" />
+        <activity
+            android:name=".vet_for_pet"
+            android:exported="false" />
+        <activity
+            android:name=".about"
+            android:exported="false" />
+        <activity
+            android:name=".privacy"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+
+        <activity
+            android:name=".MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".welcom"
+            android:exported="false" />
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CommentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".gallery_view"
+            android:exported="false" />
+        <activity
+            android:name=".gallery"
+            android:exported="false" />
+        <activity
+            android:name=".settings"
+            android:exported="false"
+            android:theme="@style/Theme.Settings" />
+        <activity
+            android:name=".pet_details"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".update_profile"
+            android:exported="false" />
+        <activity
+            android:name=".register"
+            android:exported="false" />
+        <activity
+            android:name=".homepage"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".custom_vet"
             android:exported="false" />
         <activity
             android:name=".contact"
-            android:exported="false" />
-        <activity
-            android:name=".pets_info"
-            android:exported="false" />
-        <activity
-            android:name=".homepage"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false" />
-            <!--*android:theme="@style/AppTheme.NoActionBar"-->
+            android:exported="false" /> <!-- *android:theme="@style/AppTheme.NoActionBar" -->
         <activity
             android:name=".location"
             android:exported="true" />
         <activity
-            android:name=".All_posts"
-            android:exported="true" />
-        <activity
-            android:name=".CreatePost"
-            android:exported="true" />
-        <activity
-            android:name=".profile"
-            android:exported="true" />
-        <activity
-            android:name=".register"
+            android:name=".splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

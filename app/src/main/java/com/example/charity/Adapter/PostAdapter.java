@@ -126,6 +126,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
             public void onClick(View view) {
                 if(holder.like.getTag().equals("like")){
                     FirebaseDatabase.getInstance().getReference().child("likes").child(pst.getPostid()).child(firebaseUser.getUid()).setValue(true);
+                    addNotifications(pst.getPublisher(),pst.getPostid());
                 }else{
                     FirebaseDatabase.getInstance().getReference().child("likes").child(pst.getPostid()).child(firebaseUser.getUid()).removeValue();
                 }
@@ -261,6 +262,15 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
             }
         });
 
+    }
+    private void addNotifications(String userid,String postid){
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Notifications").child(userid);
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("userid",firebaseUser.getUid());
+        hashMap.put("text","liked your post ");
+        hashMap.put("postid",postid);
+        hashMap.put("ispost",true);
+        reference.push().setValue(hashMap);
     }
 
     private void publisherinfo(final ImageView image_profile,final TextView uname,final TextView publisher,final String userid){

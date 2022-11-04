@@ -1,4 +1,4 @@
-package com.example.donation;
+package com.example.charity;
 
 import androidx.appcompat.app.AppCompatActivity;
 

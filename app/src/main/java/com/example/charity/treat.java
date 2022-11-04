@@ -1,4 +1,4 @@
-package com.example.treat_pet;
+package com.example.charity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

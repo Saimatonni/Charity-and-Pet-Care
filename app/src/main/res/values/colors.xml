@@ -9,20 +9,17 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green">#104730</color>
     <color name="ash">#626548</color>
-    <color name="pinkish_brown">#F1CCC2</color>
-    <color name="green_mint">#B4D6C1</color>
     <color name="pink">#DDB7A8</color>
-    <color name="warm_ivory">#FFEFCD</color>
-    <color name="natural">#A58E74</color>
-    <color name="matcha">#A4807E</color>
     <color name="green_light">#B3CF99</color>
     <color name="blurry">#E5D2C4</color>
     <color name="colorPrimary">#455cde</color>
     <color name="colorPrimaryDark">#403d3d</color>
-   <!--for settings part--> 
+    <color name="matcha_green">#E2ECBA</color>
+    <color name="pinkish_brown">#F1CCC2</color>
+    <color name="green_mint">#B4D6C1</color>
+    <color name="warm_ivory">#FFEFCD</color>
+    <color name="natural">#A58E74</color>
+    <color name="matcha">#A4807E</color>
     <color name="bg_color">#c2c4b6</color>
-    <color name="secondary">#ff03dac5</color>
-    <color name="night_mode">#6124b1</color>
-    <color name="notifications">#13b2c3</color>
 
 </resources>

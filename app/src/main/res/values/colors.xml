@@ -9,7 +9,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green">#104730</color>
     <color name="ash">#626548</color>
+    <color name="pinkish_brown">#F1CCC2</color>
+    <color name="green_mint">#B4D6C1</color>
     <color name="pink">#DDB7A8</color>
+    <color name="warm_ivory">#FFEFCD</color>
+    <color name="natural">#A58E74</color>
+    <color name="matcha">#A4807E</color>
     <color name="green_light">#B3CF99</color>
     <color name="blurry">#E5D2C4</color>
     <color name="colorPrimary">#455cde</color>

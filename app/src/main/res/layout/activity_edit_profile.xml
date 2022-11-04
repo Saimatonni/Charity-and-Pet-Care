@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".EditProfileActivity">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
         <ImageButton
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/ic_baseline_add_photo_24"
+            android:src="@drawable/ic_baseline_add_a_photo_24"
             android:layout_gravity="center"
             android:id="@+id/image_profile"
             android:layout_margin="10dp"/>

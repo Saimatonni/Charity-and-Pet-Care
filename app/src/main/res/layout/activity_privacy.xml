@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/about"
+    android:background="@drawable/privacy"
     tools:context=".privacy">
 
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:id="@+id/backph"
         android:padding="12dp"
-        android:id="@+id/backah"
         android:src="@drawable/back_btn" />
 
 </LinearLayout>

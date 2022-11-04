@@ -6,13 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     style="@style/screen"
-    tools:context=".MainActivity">
+    tools:context=".settings">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/backsh"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:padding="12dp"

@@ -35,6 +35,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Locale;
 
 public class PostActivity extends AppCompatActivity {
     Uri imageUrl=null;
@@ -129,7 +130,7 @@ public class PostActivity extends AppCompatActivity {
 
                                     newPost.child("postimage").setValue(task.getResult().toString());
                                     newPost.child("description").setValue(des);
-                                    newPost.child("catagory").setValue(cat);
+                                    newPost.child("catagory").setValue(cat.toLowerCase(Locale.ROOT));
                                     newPost.child("location").setValue(loca);
                                     newPost.child("publisher").setValue(FirebaseAuth.getInstance().getCurrentUser().getUid());
                                     //newPost.child("image").setValue(task.getResult().toString());

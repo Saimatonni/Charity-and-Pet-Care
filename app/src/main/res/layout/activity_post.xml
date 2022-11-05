@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#B89896"
     tools:context=".PostActivity">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -14,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/toolbar"
-            android:background="@color/white">
+            android:background="@color/ash">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -45,12 +46,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#B89896">
 
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="396dp"
             android:layout_height="201dp"
+            android:background="#574141"
             android:src="@drawable/ic_baseline_add_a_photo_24" />
 
         <EditText
@@ -58,20 +61,20 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="15dp"
-            android:hint="Description"
+            android:hint="  Description"
             android:maxLines="50" />
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_marginTop="15dp"
-            android:hint="Catagory"
+            android:hint="  Catagory"
             android:maxLines="1"
             android:id="@+id/catagory"/>
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:layout_marginTop="15dp"
-            android:hint="Location"
+            android:hint="  Location"
             android:maxLines="1"
             android:id="@+id/location"/>
     </LinearLayout>

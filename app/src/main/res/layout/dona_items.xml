@@ -16,7 +16,7 @@
     <ImageView
         android:id="@+id/post_image"
         android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:padding="1dp"
          />
 

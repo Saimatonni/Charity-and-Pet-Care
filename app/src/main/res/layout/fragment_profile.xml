@@ -218,7 +218,6 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="5dp"
-                android:background="@color/black"
                 android:orientation="horizontal">
 
                 <TextView
@@ -226,10 +225,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#8c7268"
                     android:gravity="center"
-                    android:text="See My Donation Posts"
-                    android:textSize="20dp"
+                    android:text="Donation Posts"
+                    android:textColor="#222314"
+                    android:textSize="22dp"
+
                     android:textStyle="bold" />
             </LinearLayout>
 

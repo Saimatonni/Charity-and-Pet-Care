@@ -30,6 +30,10 @@ import com.example.charity.Fragment.NotificationFragment;
 import com.example.charity.Fragment.ProfileFragment;
 import com.example.charity.Fragment.SearchFragment;
 import com.example.charity.Model.User;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
@@ -43,6 +47,8 @@ import com.google.firebase.database.ValueEventListener;
 
 
 public class homepage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+    GoogleSignInOptions gso;
+    GoogleSignInClient gsc;
     ImageView bgapp;
     FirebaseUser firebaseUser;
     ImageView image_profile;
@@ -67,6 +73,15 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
         email = header.findViewById(R.id.email);
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         navi_bar = findViewById(R.id.navi_bar);
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        gsc  = GoogleSignIn.getClient(this,gso);
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        if(acct!=null){
+            String personName = acct.getDisplayName();
+            String personEmail = acct.getEmail();
+            username.setText(personName);
+            email.setText(personEmail);
+        }
        // location = findViewById(R.id.location);
         SharedPreferences prefs = getSharedPreferences("PREFS", Context.MODE_PRIVATE);
         profileid = prefs.getString("profileid","none");
@@ -101,10 +116,6 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
                         editor.apply();
                         selectedFragment = new ProfileFragment();
                         break;
-                    /*case R.id.search:
-                        //startActivity(new Intent(homepage.this,profile.class));
-                        selectedFragment = new SearchFragment();
-                        break;*/
                     case R.id.notifications:
                         // startActivity(new Intent(homepage.this,CreatePost.class));
                         selectedFragment = new NotificationFragment();
@@ -146,13 +157,6 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
             case R.id.contact:
                 startActivity(new Intent(homepage.this,contact.class));
                 break;
-            /*case R.id.profile:
-                startActivity(new Intent(homepage.this,profile.class));
-                break;
-                SharedPreferences.Editor editor = getSharedPreferences("PREFS",MODE_PRIVATE).edit();
-                editor.putString("profileid",FirebaseAuth.getInstance().getCurrentUser().getUid());
-                startActivity(new Intent(homepage.this,profile.class));
-                break;*/
             case R.id.settings:
                 startActivity(new Intent(homepage.this,settings.class));
                 break;
@@ -161,6 +165,16 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
                 break;
             case R.id.about:
                 startActivity(new Intent(homepage.this,about.class));
+                break;
+            case R.id.feedback:
+                startActivity(new Intent(homepage.this,Feedback.class));
+                break;
+            case R.id.share:
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.setType("text/plain");
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "Download this app to spread happiness \n https://drive.google.com/file/d/1fHwTMVJ5wISDD1LK5u8mWt-8WsPsJ-iU/view?usp=sharing");
+                startActivity(Intent.createChooser(sendIntent, "Choose one"));
                 break;
         }
         return true;
@@ -186,12 +200,7 @@ public class homepage extends AppCompatActivity implements NavigationView.OnNavi
 
             }
         });
-        /*location.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(homepage.this,MapActivity.class));
-            }
-        });*/
+
     }
 
 }

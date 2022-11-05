@@ -20,7 +20,7 @@ public class DonateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donate);
 
-        button=findViewById(R.id.button);
+        button=findViewById(R.id.btnSend);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

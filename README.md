@@ -17,7 +17,7 @@ Splash amd Welcome screen:
 
 
 <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/Screenshot_20221104-225932__01.jpg" width="200" height="400" />
-
+<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/IMG-20221017-WA0311.jpg" width="200" height="400" />
 
 
 

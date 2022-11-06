@@ -41,3 +41,11 @@ Navigation Drawer , Mode Change, Language :
 Security & Privacy , About , Feedback , Share :
 
 <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/security.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/about.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/feedback.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/share.jpg" height="400" />
+
+Pets , Vet for Pets , Treat For Pets Screen :
+
+<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/pet_det.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/vet.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/treat.jpg" height="400" />  
+
+Gallery , Donate Page :
+
+<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/video.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/donate.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/donate_link.jpg" height="400" />   

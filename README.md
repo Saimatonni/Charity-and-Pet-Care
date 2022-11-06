@@ -38,4 +38,6 @@ Navigation Drawer , Mode Change, Language :
 
 <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/drawer.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/day_mode.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/night_mode.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/languge.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/lag_out.jpg" height="400" />
 
+Security & Privacy , About , Feedback , Share :
 
+<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/security.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/about.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/feedback.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/share.jpg" height="400" />

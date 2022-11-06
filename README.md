@@ -18,6 +18,10 @@ Splash, Welcome, Login, Register screen:
 
 <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/splash.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/welcom.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/register.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/login.jpg" height="400" />
 
+Forgot Password, Sing in Google/Facebook :
+
+<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/forgot_pass.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/forgot_pass_mail.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/login_ggl.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/login_fb.jpg" height="400" />
+
 
 
 

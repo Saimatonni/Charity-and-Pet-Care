@@ -52,4 +52,4 @@ Gallery , Donate Page :
 
 Contact Us :
 
-<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/contact.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/contact_throught.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/login_ggl.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/contact_mail.jpg" height="400" />
+<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/contact.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/contac_throught.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/contact_mail.jpg" height="400" />

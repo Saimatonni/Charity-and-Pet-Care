@@ -13,7 +13,7 @@ The app is currently in its basic version having only the bare minimum features.
 
 Features:
 Splash amd Welcome screen:
-![Screenshot_20221104-225932__01](https://user-images.githubusercontent.com/74361691/200177803-4716c13c-05af-4998-ba14-b8aa0168afaa.jpg)
+![Screenshot_20221104-225932__01](https://user-images.githubusercontent.com/74361691/200177803-4716c13c-05af-4998-ba14-b8aa0168afaa.jpg)![IMG-20221017-WA0311](https://user-images.githubusercontent.com/74361691/200178160-18bcfdfc-8a7c-452e-873b-cb370fbc9fc7.jpg)
 
 
 

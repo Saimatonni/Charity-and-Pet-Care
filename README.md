@@ -22,6 +22,11 @@ Forgot Password, Sing in Google/Facebook :
 
 <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/forgot_pass.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/forgot_pass_mail.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/login_ggl.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/login_fb.jpg" height="400" />
 
+Profile , Edit Profile, View Profile :
+
+<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/profile.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/edit_profile.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/see_profile.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/see_profile2.jpg" height="400" />
+
+
 
 
 

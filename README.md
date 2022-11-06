@@ -16,7 +16,7 @@ Features:
 Splash, Welcome, Login, Register screen:
 
 
-<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/splash.jpg" height="400" /> <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/welcom.jpg" height="400" /> <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/register.jpg" height="400" /> <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/login.jpg" height="400" />
+<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/splash.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/welcom.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/register.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/login.jpg" height="400" />
 
 
 

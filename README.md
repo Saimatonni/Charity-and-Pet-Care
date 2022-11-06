@@ -14,8 +14,6 @@ The app is currently in its basic version having only the bare minimum features.
 Features:
 Splash amd Welcome screen:
 
-[Charity & Pet.pdf](https://github.com/Saimatonni/Charity-and-Pet-Care/files/9946125/Charity.Pet.pdf)
-
 
 
 

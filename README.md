@@ -16,8 +16,7 @@ Features:
 Splash amd Welcome screen:
 
 
-<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/splash.jpg" height="400" />
-<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/IMG-20221017-WA0311.jpg" width="200" height="400" />
+<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/splash.jpg" height="400" /><img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/welcom.jpg" height="400" />
 
 
 

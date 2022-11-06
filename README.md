@@ -30,7 +30,9 @@ Newsfeed, Create Post, Edit Post :
 
 <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/newsfeed.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/create_post.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/edit_post.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/edit_post_out.jpg" height="400" />
 
+Search , Notifications , Map , Comments :
 
+<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/search.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/search_out.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/notifications.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/map.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/comment.jpg" height="400" />
 
 
 

@@ -11,6 +11,10 @@ We have used Java as the backend language for our app.  We have used Firebase re
 
 The app is currently in its basic version having only the bare minimum features. We’d like to improve the user interface to make it appealing to the users.
 
+Features:
+Splash amd Welcome screen:
 
-The APK link for the app is shared. 
+
+
+
 

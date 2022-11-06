@@ -11,7 +11,7 @@ We have used Java as the backend language for our app.  We have used Firebase re
 
 The app is currently in its basic version having only the bare minimum features. We’d like to improve the user interface to make it appealing to the users.
 
- APK file for this app : https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/Charity_And_Pet_Care.apk
+ APK link for this app : https://drive.google.com/file/d/1uANV06XYkPryVUZyOzVXokfTk2VMCGp2/view?usp=drivesdk
 
 Features:
 

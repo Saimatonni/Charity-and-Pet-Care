@@ -26,6 +26,11 @@ Profile , Edit Profile, View Profile :
 
 <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/profile.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/edit_profile.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/see_profile.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/see_profile2.jpg" height="400" />
 
+Newsfeed, Create Post, Edit Post :
+
+<img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/newsfeed.jpg" height="400" />   <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/create_post.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/edit_post.jpg" height="400" />    <img src="https://github.com/Saimatonni/Charity-and-Pet-Care/blob/master/iu_ss/edit_post_out.jpg" height="400" />
+
+
 
 
 

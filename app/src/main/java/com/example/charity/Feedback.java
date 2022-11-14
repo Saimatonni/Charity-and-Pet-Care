@@ -97,27 +97,7 @@ public class Feedback extends AppCompatActivity {
                 startActivity(new Intent(Feedback.this,homepage.class));
             }
         });
-       /* FirebaseDatabase.setAndroidContext(this);
-        String UniqueID = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
-        firebaseDatabase = new FirebaseDa(""+ UniqueID);///actual url er sathe /Users add kore dis
-        send.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final String message = messagedata.getText().toString();
-                Firebase child_feedback = firebase.child("Feedback");
-                child_feedback.setValue(message);
-                if(message.isEmpty()){
-                    messagedata.setError("This field is required");
-                    send.setEnabled(false);
-                }
-                else{
-                    messagedata.setError(null);
-                    send.setEnabled(true);
-                }
-                Toast.makeText(Feedback.this, "Feedback received, thank you!", Toast.LENGTH_SHORT).show();
-
-            }
-        });*/
+      
 
     }
     private void sendFeedback(String Smessage){
@@ -131,17 +111,6 @@ public class Feedback extends AppCompatActivity {
 
        // hashMap.put("cid",commentid);
         reference.setValue(hashMap);
-                /*.addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
-                   // progressDialog.dismiss();
-                    Intent intent = new Intent(Feedback.this,homepage.class);
-                    //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
-                }
-            }
-        });*/
-        //messagedata.setText("");
+               
     }
 }

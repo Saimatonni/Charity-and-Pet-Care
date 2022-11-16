@@ -101,8 +101,7 @@ public class Feedback extends AppCompatActivity {
 
     }
     private void sendFeedback(String Smessage){
-       // FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-       // String userid = firebaseUser.getUid();
+ 
         reference = FirebaseDatabase.getInstance().getReference("Feedback");
        // String feedbackid = reference.push().getKey();
         HashMap<String,Object> hashMap = new HashMap<>();

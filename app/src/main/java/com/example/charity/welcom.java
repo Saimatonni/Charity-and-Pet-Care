@@ -65,8 +65,7 @@ public class welcom extends AppCompatActivity {
         gsc  = GoogleSignIn.getClient(this,gso);
         fb = findViewById(R.id.fb);
         callbackManager = CallbackManager.Factory.create();
-        //loginButton.setReadPermissions("email", "public_profile");
-        //LoginManager.getInstance().logInWithReadPermissions(this,Arrays.asList("public_profile"));
+     
         LoginManager.getInstance().registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
                     @Override

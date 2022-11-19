@@ -9,7 +9,7 @@ Keeping this mindset, our team decided to develop a charity app which will bring
 We have used Java as the backend language for our app.  We have used Firebase realtime database to store and collect information from users. We used Google Map for map integrations.  We used Android Studio IDE to develop our app.
 
 
-The app is currently in its basic version having only the bare minimum features. We’d like to improve the user interface to make it appealing to the users.
+The app is currently in its basic version having only the bare minimum features. We’d like to improve the user interface to make it appealing to the users
 
  APK link for this app : https://drive.google.com/file/d/1uANV06XYkPryVUZyOzVXokfTk2VMCGp2/view?usp=drivesdk
 
